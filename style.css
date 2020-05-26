@@ -1,0 +1,379 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background: #000000;
+    color: #fff;
+    /* height: 30px; */
+    min-height: 100vh;
+    font-family: Roboto Condensed;
+  }
+  
+  /* rwb各裝置斷點 */
+  /* small device (320px and up) */
+  @media only screen and (min-width: 320px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  
+  /* medium device (786px and up) */
+  @media only screen and (min-width: 786px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  /* large device (900px and up) */
+  @media only screen and (min-width: 900px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  /* extra large device (1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    html {
+      font-size: 20px;
+    }
+  }
+  
+  .title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #title_inner {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 2.2rem;
+    width: 70%;
+    margin: 8rem 0 0 0;
+    min-height: 5rem;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    border-radius: 2px;
+    border-radius: 2px;
+    /* top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+    text-align: center;
+    z-index: 1;
+  }
+  
+  #title_inner h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 0 1.2rem 0;
+    font-family: Roboto Condensed;
+    font-weight: 700;
+  }
+  
+  #title_inner p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto Condensed;
+    font-weight: 300;
+  }
+  
+  .bg.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bg {
+    top: 0px;
+    left: 0px;
+    background-image: url("image/bg_fix.jpeg");
+    background-size: auto, auto, 100% auto;
+    background-position: center;
+    background-repeat: repest, no-repeat, no-repeat;
+    z-index: -1;
+  }
+  
+  .nav {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+    line-height: 4rem;
+    margin: -4rem auto 0 auto;
+  }
+  
+  #nav_inner {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 95%;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  
+  .nav_links {
+    /* ＊margin-top是ul css的預設值嗎？？？ */
+    margin-top: 0;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    vertical-align: baseline;
+    font: inherit;
+    box-sizing: inherit;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    overflow: hidden;
+    padding-inline-start: 1.5rem;
+  }
+  
+  .nav_links li {
+    height: 100%;
+    width: auto;
+    /* margin:0 0.2rem; */
+    text-align: conter;
+    font: inherit;
+    box-sizing: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+    /* padding: 0 0.5rem; */
+    vertical-align: baseline;
+  }
+  
+  .nav_links a {
+    padding: 0 1.5rem;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
+  
+  .nav_links a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* blog外盒 */
+  .content {
+    background-color: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 72rem;
+    z-index: 2;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  /* 文章外盒 */
+  .blog {
+    /* border為什麼這麼粗？ */
+    border-color: #eeeeee;
+    border-style: solid;
+    border-left-width: 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 2px;
+    text-align: center;
+    padding: 2.5rem;
+    width: 50%;
+  }
+  
+  .blog_date {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: inherit;
+  }
+  
+  .blog h2 {
+    color: #000000;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin: 1.2rem 0 0 0;
+  }
+  
+  /* 圖片如何fit我要的範圍？ */
+  
+  .image {
+    position: relative;
+    margin: 2rem 0;
+  }
+  
+  /* 圖片盒子 */
+  .imagebox {
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imagebox img {
+    width: 100%;
+    background-position: center center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all 1s ease-out;
+  }
+  
+  .imagebox img:hover {
+    transform: translate3d(-50%, -50%, 0) scale(1.2, 1.2);
+  }
+  
+  .blog p {
+    color: #000000;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  /* footer */
+  
+  #footer {
+    background-color: #ededf1;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 72rem;
+    z-index: 2;
+    box-sizing: inherit;
+  }
+  
+  .footer_title {
+    margin: 3rem 0 2rem 0;
+    color: #000000;
+    font-size: 2rem;
+  }
+  
+  #footer section {
+    border: 0;
+    width: 100%;
+    padding: 2rem 4rem 2rem 4rem;
+    cursor: default;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form_inner {
+    width: 100%;
+    color: #000000;
+    padding: 15px 0;
+  }
+  
+  #footer lable {
+    padding: 0 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  #footer input {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #d9dae4;
+    height: 3.5rem;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  #footer input::placeholder {
+    color: #b7b8c4;
+    font-weight: 300;
+  }
+  
+  #footer input:focus {
+    color: #222222;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #5c5d65;
+  }
+  
+  #footer textarea {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 5px 0;
+    line-height: 1.8rem;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 2px solid #d9dae4;
+    height: 5rem;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  #footer textarea::placeholder {
+    color: #b7b8c4;
+    font-weight: 300;
+  }
+  
+  #footer textarea:focus {
+    color: #222222;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #5c5d65;
+  }
+  
+  .split_contact {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .split_contact_inner {
+    width: 33%;
+    padding: 2rem 1rem;
+  }
+  
+  .split_contact_inner h3 {
+    color: #222222;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .split_contact_inner p {
+    color: #5c5d65;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  

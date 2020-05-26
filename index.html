@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <title>Static Template</title>
+  </head>
+
+  <body>
+    <!-- <title & background> -->
+    <div class="title">
+      <div id="title_inner">
+        <h1>
+          Someday or One day
+        </h1>
+        <p>
+          He said to me that one day. He'd meet me by the Milky Way. Impossible
+          to stay away Impossible to stay.
+        </p>
+      </div>
+      <div class="bg fixed" style="transform:none;"></div>
+    </div>
+
+    <!-- nav bar -->
+    <nav class="nav">
+      <div id="nav_inner">
+        <ul class="nav_links">
+          <!-- 為什麼要連結到特定區域會失敗？？？ -->
+          <li>
+            <a href="#list">Blog</a>
+          </li>
+          <li>
+            <a href="#footer">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 文章列表 -->
+    <div class="content" id="list">
+      <!-- 第一組 blog -->
+      <article class="blog">
+        <span class="blog_date">
+          July 5,2020
+        </span>
+        <h2>
+          You Make My Dreams
+        </h2>
+        <a href="#" class="image">
+          <div class="imagebox">
+            <img src="image/left.jpeg" />
+          </div>
+        </a>
+        <p>
+          He said to me that one day.He’d meet me by the Milky Way.Impossible to
+          stay away.Impossible to stay.
+        </p>
+      </article>
+
+      <!-- 第二組 blog -->
+      <article class="blog">
+        <span class="blog_date">
+          July 5,2020
+        </span>
+        <h2>
+          You Make My Dreams
+        </h2>
+        <a href="#" class="image fit">
+          <div class="imagebox">
+            <img src="image/right.jpeg" />
+          </div>
+        </a>
+        <p>
+          Sunset fades away.Streetlights start to blaze.A turntable corner
+          café.As evening fades to gray.Red brick alleyways.
+        </p>
+      </article>
+      
+      <!-- 第三組 blog -->
+      <article class="blog">
+        <span class="blog_date">
+          July 5,2020
+        </span>
+        <h2>
+          You Make My Dreams
+        </h2>
+        <a href="#" class="image fit">
+          <div class="imagebox">
+            <img src="image/right.jpeg" />
+          </div>
+        </a>
+        <p>
+          Sunset fades away.Streetlights start to blaze.A turntable corner
+          café.As evening fades to gray.Red brick alleyways.
+        </p>
+      </article>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+
+      <!-- footer表單 -->
+      <section>
+        <form>
+          <h2 class="footer_title">
+            Contact
+          </h2>   
+          <div class="form">
+            <!-- 第一組 input -->
+            <div class="form_inner">
+              <lable for="name">
+                Name
+              </lable>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+
+            <!-- 第二組 input-->
+            <div class="form_inner">
+              <lable for="email">
+                Email
+              </lable>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <!-- text area -->
+            <div class="form_inner">
+              <lable for="message">
+                Message
+              </lable>
+              <textarea type="text" placeholder="Type Something.."></textarea>
+           </lable>
+            </div>
+          </div>
+        </form>
+      </section>
+      
+      <!-- footer 聯絡方式列表 -->
+      <section class="split_contact">
+
+        <!-- 聯絡方式 - 地址 -->
+         <div class="split_contact_inner">
+            <h3>
+              ADDRESS
+            </h3>
+           <p>
+              1234 Somewhere Road #87257
+              <br>
+              Nashville, TN 00000-0000
+           </p>       
+         </div>  
+         
+         <!-- 聯絡方式 - 電話 -->
+         <div class="split_contact_inner">
+            <h3>
+              PHONE
+            </h3>
+           <p>
+              (00)0000-0000
+           </p>       
+         </div>  
+
+         <!-- 聯絡方式 - email -->
+         <div class="split_contact_inner">
+            <h3>
+              EMAIL
+            </h3>
+           <p>
+              ajaa@gmail.com
+           </p>       
+         </div>  
+      </section>
+    </footer>
+  </body>
+</html>
