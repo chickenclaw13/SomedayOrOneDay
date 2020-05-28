@@ -193,7 +193,6 @@ html {
   
   /* 文章外盒 */
   .blog {
-    /* border為什麼這麼粗？ */
     border-color: #eeeeee;
     border-style: solid;
     border-left-width: 0;
@@ -267,7 +266,9 @@ html {
   
   #footer {
     background-color: #ededf1;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
     margin: 0 auto;
     width: 95%;
@@ -284,10 +285,12 @@ html {
   
   #footer section {
     border: 0;
-    width: 100%;
-    padding: 2rem 4rem 2rem 4rem;
+    width: 50%;
+    padding: 2rem 2rem  2rem 3rem;
     cursor: default;
   }
+
+  
   
   .form {
     display: flex;
@@ -358,16 +361,18 @@ html {
   .split_contact {
     flex-wrap: wrap;
     display: flex;
+
   }
   
   .split_contact_inner {
-    width: 33%;
-    padding: 2rem 1rem;
+    width: 100%;
+    padding-left: 1rem;
   }
   
   .split_contact_inner h3 {
     color: #222222;
     font-weight: 700;
+    margin-top: 0;
     font-size: 1.2rem;
   }
   
