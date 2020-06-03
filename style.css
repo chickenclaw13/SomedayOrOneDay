@@ -161,7 +161,6 @@ html {
     font-size: 1.5rem;
     display: block;
     /* padding: 0 0.5rem; */
-    vertical-align: baseline;
   }
   
   .nav_links a {
@@ -266,6 +265,7 @@ html {
 
   /* footer */
   
+
   #footer {
     background-color: #ededf1;
     display: flex;
@@ -280,16 +280,19 @@ html {
   }
   
   .footer_title {
-    margin: 3rem 0 2rem 0;
+    margin: 1.5rem 0 2rem 0;
     color: #000000;
     font-size: 2rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
   }
   
-  #footer section {
+  .footer_form {
     border: 0;
     width: 50%;
-    padding: 2rem 2rem  2rem 3rem;
+    padding: 2rem 2rem 2rem 3rem;
     cursor: default;
+    order:1;
   }
 
   
@@ -302,7 +305,7 @@ html {
   .form_inner {
     width: 100%;
     color: #000000;
-    padding: 15px 0;
+    padding: 1rem 0;
   }
   
   #footer lable {
@@ -347,7 +350,6 @@ html {
     outline: none;
     border: none;
     border-bottom: 2px solid #ededf1;
-    /* transition: 0.4s; */
   }
 
   #footer input:focus + span{
@@ -384,10 +386,12 @@ html {
     
   }
 
+
+
+
   #footer .test_span {
     font-size: 1.5rem;
     padding: 1rem;
-    /* margin: 5px 0; */
     line-height: 1.8rem;
     background-color: yellow;
     border: none;
@@ -401,11 +405,11 @@ html {
 
   ＃footer .test_span + span{
     position: absolute;
-    width: 100%;
-    height: 20px;
+    width: 0%;
+    height: 0;
     bottom: 0;
-    left: 0px;
-    background: red;
+    left: 0;
+    background-color: red;
     transition: all 0.45s ease;
   }
 
@@ -413,24 +417,33 @@ html {
     color: #222222;
     outline: none;
     border: none;
-    border-bottom: 2px solid orchid;
-    
+    border-bottom: 2px solid #ededf1;
   }
 
 
-  #footer textarea:focus + span{
+  #footer .test_span:focus + span{
     width: 100%;
   }
   
+
+
   .split_contact {
+    width: 50%;
+    padding: 2rem 2rem 2rem 3rem;
+    justify-content:flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     display: flex;
-
+    flex-direction: column;
+    order:2;
   }
   
   .split_contact_inner {
+    margin: 0;
+    align-self: flex-start;
+    padding: 1rem 0 2rem 0;
     width: 100%;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
   }
   
   .split_contact_inner h3 {
@@ -442,6 +455,7 @@ html {
   
   .split_contact_inner p {
     color: #5c5d65;
+    margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.5rem;
   }
