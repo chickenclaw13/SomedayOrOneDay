@@ -314,28 +314,47 @@ html {
     font-weight: 500;
   }
   
-  #footer input {
-    font-size: 1.4rem;
-    padding: 0 1rem;
-    border: none;
-    border-bottom: 2px solid #ededf1;
-    height: 3.5rem;
-    width: 100%;
-    border-radius: 6px 6px 0 0;
-  }
-
   #footer .input_wrapper {
     position: relative;
     margin: 10px 0;
     overflow: hidden;
   }
 
-  #footer input + span{
+  #footer .effectEl {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    border: none;
+    border-bottom: 2px solid #d9dae4;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  #footer input.effectEl {
+    height: 3.5rem;
+  }
+
+  #footer textarea.effectEl {
+
+
+    height: 5rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  #footer textarea.effectEl:focus{
+    outline: none;
+    /* outline-offset: 0; */
+  }
+
+  
+
+  #footer .effectEl + span{
     position: absolute;
     width: 0%;
     height: 2px;
     bottom: 0;
     left: 0;
+    margin-top:-2px;
     background: #5c5d65;
     transition: all 0.45s ease;
   }
@@ -352,24 +371,24 @@ html {
     border-bottom: 2px solid #ededf1;
   }
 
-  #footer input:focus + span{
+  #footer .effectEl:focus + span{
     width: 100%;
   }
   
-  #footer textarea {
+  /* #footer textarea {
     font-size: 1.5rem;
     padding: 1rem;
-    /* margin: 5px 0; */
+    margin: 5px 0;
     line-height: 1.8rem;
     background-color: #ffffff;
     border: none;
     border: 2px solid #ededf1;
     height: 5rem;
     width: 100%;
-    /* min-width: 100%; */
+    min-width: 100%;
     border-radius: 6px;
     transition: all 0.45s ease;
-  }
+  } */
 
 
   
@@ -378,18 +397,18 @@ html {
     font-weight: 300;
   }
   
-  #footer textarea:focus {
+  /* #footer textarea:focus {
     color: #222222;
     outline: none;
     border: none;
     border: 2px solid #5c5d65;
     
-  }
+  } */
 
 
 
 
-  #footer .test_span {
+  /* #footer .test_span {
     font-size: 1.5rem;
     padding: 1rem;
     line-height: 1.8rem;
@@ -398,7 +417,6 @@ html {
     border-bottom: 2px solid #ededf1;
     height: 5rem;
     width: 100%;
-    /* min-width: 100%; */
     border-radius: 6px 6px 0 0;
     transition: all 0.45s ease;
   }
@@ -424,7 +442,7 @@ html {
   #footer .test_span:focus + span{
     width: 100%;
   }
-  
+   */
 
 
   .split_contact {
