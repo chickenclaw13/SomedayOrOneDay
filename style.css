@@ -318,7 +318,9 @@ html {
     position: relative;
     margin: 10px 0;
     overflow: hidden;
+    outline: none;
   }
+
 
   #footer .effectEl {
     font-size: 1.4rem;
@@ -329,21 +331,23 @@ html {
     border-radius: 6px 6px 0 0;
   }
 
+  #footer .effectEl::placeholder {
+    color: #b7b8c4;
+    font-weight: 300;
+  }
+
   #footer input.effectEl {
     height: 3.5rem;
   }
 
   #footer textarea.effectEl {
-
-
     height: 5rem;
     padding-top: 1rem;
-    margin-bottom: 0;
+    outline-offset: 0;
   }
 
   #footer textarea.effectEl:focus{
     outline: none;
-    /* outline-offset: 0; */
   }
 
   
@@ -359,10 +363,7 @@ html {
     transition: all 0.45s ease;
   }
   
-  #footer input::placeholder {
-    color: #b7b8c4;
-    font-weight: 300;
-  }
+  
   
   #footer input:focus {
     color: #222222;
@@ -374,6 +375,12 @@ html {
   #footer .effectEl:focus + span{
     width: 100%;
   }
+
+   
+  /* #footer textarea::placeholder {
+    color: #b7b8c4;
+    font-weight: 300;
+  } */
   
   /* #footer textarea {
     font-size: 1.5rem;
@@ -391,11 +398,7 @@ html {
   } */
 
 
-  
-  #footer textarea::placeholder {
-    color: #b7b8c4;
-    font-weight: 300;
-  }
+ 
   
   /* #footer textarea:focus {
     color: #222222;
