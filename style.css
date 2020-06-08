@@ -357,7 +357,7 @@ html {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: 3px;
+    bottom: 4px;
     left: 0;
     background: #5c5d65;
     transition: all 0.45s ease;
