@@ -352,9 +352,8 @@ html {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
-    margin-top:-2px;
     background: #5c5d65;
     transition: all 0.45s ease;
   }
